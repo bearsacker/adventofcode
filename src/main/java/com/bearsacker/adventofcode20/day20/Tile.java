@@ -3,7 +3,7 @@ package com.bearsacker.adventofcode20.day20;
 import java.io.BufferedReader;
 import java.io.EOFException;
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -17,7 +17,7 @@ public class Tile {
 
     private boolean[][] cells;
 
-    private ArrayList<String> connectors;
+    private HashMap<String, Transformation> connectors;
 
     public Tile(BufferedReader reader) throws IOException {
         cells = new boolean[SIZE][SIZE];
@@ -38,15 +38,15 @@ public class Tile {
             throw new EOFException();
         }
 
-        connectors = new ArrayList<>();
-        connectors.add(encodeLine(0));
-        connectors.add(encodeFlipLine(0));
-        connectors.add(encodeLine(SIZE - 1));
-        connectors.add(encodeFlipLine(SIZE - 1));
-        connectors.add(encodeColumn(0));
-        connectors.add(encodeFlipColumn(0));
-        connectors.add(encodeColumn(SIZE - 1));
-        connectors.add(encodeFlipColumn(SIZE - 1));
+        connectors = new HashMap<>();
+        connectors.put(encodeLine(0), new Transformation(0, false));
+        connectors.put(encodeFlipLine(0), new Transformation(0, true));
+        connectors.put(encodeLine(SIZE - 1), new Transformation(180, false));
+        connectors.put(encodeFlipLine(SIZE - 1), new Transformation(180, true));
+        connectors.put(encodeColumn(0), new Transformation(270, false));
+        connectors.put(encodeFlipColumn(0), new Transformation(270, true));
+        connectors.put(encodeColumn(SIZE - 1), new Transformation(90, false));
+        connectors.put(encodeFlipColumn(SIZE - 1), new Transformation(90, true));
     }
 
     private String encodeLine(int line) {
@@ -76,7 +76,7 @@ public class Tile {
     }
 
     public boolean isConnected(Tile other) {
-        return id != other.id && connectors.parallelStream().anyMatch(x -> other.connectors.contains(x));
+        return id != other.id && connectors.keySet().parallelStream().anyMatch(x -> other.connectors.containsKey(x));
     }
 
     @Override
