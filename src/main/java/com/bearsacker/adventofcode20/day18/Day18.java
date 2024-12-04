@@ -11,7 +11,7 @@ public class Day18 {
     public static void main(String[] args) throws IOException {
         System.out.println("\n--- Day 18: Operation Order ---");
 
-        BufferedReader reader = new BufferedReader(new FileReader("2020/day18/input.txt"));
+        BufferedReader reader = new BufferedReader(new FileReader("2020/day18.txt"));
         List<String> lines = reader.lines().collect(Collectors.toList());
         reader.close();
 

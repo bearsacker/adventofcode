@@ -19,7 +19,7 @@ public class Day14 {
     public static void main(String[] args) throws IOException {
         System.out.println("\n--- Day 14: Docking Data ---");
 
-        BufferedReader reader = new BufferedReader(new FileReader("2020/day14/input.txt"));
+        BufferedReader reader = new BufferedReader(new FileReader("2020/day14.txt"));
         List<String> instructions = reader.lines().collect(Collectors.toList());
         reader.close();
 

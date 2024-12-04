@@ -11,7 +11,7 @@ public class Day8 {
     public static void main(String[] args) throws IOException {
         System.out.println("\n--- Day 8: Handheld Halting ---");
 
-        BufferedReader reader = new BufferedReader(new FileReader("2020/day08/input.txt"));
+        BufferedReader reader = new BufferedReader(new FileReader("2020/day08.txt"));
         List<Instruction> instructions = reader.lines().map(Instruction::parse).collect(Collectors.toList());
         reader.close();
 

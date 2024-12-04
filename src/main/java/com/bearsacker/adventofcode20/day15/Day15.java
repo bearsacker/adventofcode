@@ -12,7 +12,7 @@ public class Day15 {
     public static void main(String[] args) throws IOException {
         System.out.println("\n--- Day 15: Rambunctious Recitation ---");
 
-        BufferedReader reader = new BufferedReader(new FileReader("2020/day15/input.txt"));
+        BufferedReader reader = new BufferedReader(new FileReader("2020/day15.txt"));
         String line = reader.lines().reduce("", (a, b) -> a + b);
         reader.close();
 

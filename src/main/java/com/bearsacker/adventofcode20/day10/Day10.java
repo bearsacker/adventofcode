@@ -12,7 +12,7 @@ public class Day10 {
     public static void main(String[] args) throws IOException {
         System.out.println("\n--- Day 10: Adapter Array ---");
 
-        BufferedReader reader = new BufferedReader(new FileReader("2020/day10/input.txt"));
+        BufferedReader reader = new BufferedReader(new FileReader("2020/day10.txt"));
         List<Integer> numbers = reader.lines().map(Integer::parseInt).collect(Collectors.toList());
         reader.close();
 

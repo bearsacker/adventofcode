@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 public class Day5 {
 
     public static void main(String[] args) throws IOException {
-        BufferedReader reader = new BufferedReader(new FileReader("2020/day05/input.txt"));
+        BufferedReader reader = new BufferedReader(new FileReader("2020/day05.txt"));
         List<BoardingPass> boardingPass = reader.lines().map(x -> new BoardingPass(x)).collect(Collectors.toList());
         reader.close();
 

@@ -11,7 +11,7 @@ public class Day12 {
     public static void main(String[] args) throws IOException {
         System.out.println("\n--- Day 12: Rain Risk ---");
 
-        BufferedReader reader = new BufferedReader(new FileReader("2020/day12/input.txt"));
+        BufferedReader reader = new BufferedReader(new FileReader("2020/day12.txt"));
         List<String> instructions = reader.lines().collect(Collectors.toList());
         reader.close();
 

@@ -41,7 +41,7 @@ public class Day16 {
     public static void main(String[] args) throws IOException {
         System.out.println("\n--- Day 16: Ticket Translation ---");
 
-        BufferedReader reader = new BufferedReader(new FileReader("2020/day16/input.txt"));
+        BufferedReader reader = new BufferedReader(new FileReader("2020/day16.txt"));
         List<String> lines = reader.lines().collect(Collectors.toList());
         reader.close();
 

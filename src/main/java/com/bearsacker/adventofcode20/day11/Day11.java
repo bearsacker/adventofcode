@@ -11,7 +11,7 @@ public class Day11 {
     public static void main(String[] args) throws IOException {
         System.out.println("\n--- Day 11: Seating System ---");
 
-        BufferedReader reader = new BufferedReader(new FileReader("2020/day11/input.txt"));
+        BufferedReader reader = new BufferedReader(new FileReader("2020/day11.txt"));
         List<String> lines = reader.lines().collect(Collectors.toList());
         reader.close();
 

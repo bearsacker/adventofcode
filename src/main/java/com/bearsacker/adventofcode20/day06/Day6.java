@@ -10,7 +10,7 @@ public class Day6 {
     public static void main(String[] args) throws IOException {
         ArrayList<Group> groups = new ArrayList<>();
 
-        BufferedReader reader = new BufferedReader(new FileReader("2020/day06/input.txt"));
+        BufferedReader reader = new BufferedReader(new FileReader("2020/day06.txt"));
 
         String groupData = "";
         String line = reader.readLine();

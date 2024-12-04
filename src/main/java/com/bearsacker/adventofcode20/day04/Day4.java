@@ -10,7 +10,7 @@ public class Day4 {
     public static void main(String[] args) throws IOException {
         ArrayList<Passport> passports = new ArrayList<>();
 
-        BufferedReader reader = new BufferedReader(new FileReader("2020/day04/input.txt"));
+        BufferedReader reader = new BufferedReader(new FileReader("2020/day04.txt"));
 
         String passportData = "";
         String line = reader.readLine();

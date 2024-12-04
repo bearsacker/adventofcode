@@ -38,7 +38,7 @@ public class Day7 {
     public static void main(String[] args) throws IOException {
         HashMap<String, Rule> rules = new HashMap<>();
 
-        BufferedReader reader = new BufferedReader(new FileReader("2020/day07/input.txt"));
+        BufferedReader reader = new BufferedReader(new FileReader("2020/day07.txt"));
         reader.lines().forEach(line -> {
             Rule rule = new Rule(line);
             rules.put(rule.getName(), rule);

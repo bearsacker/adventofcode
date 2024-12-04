@@ -15,7 +15,7 @@ public class Day2 {
     public static void main(String[] args) throws IOException {
         int countValidPasswordFirstPolicy = 0;
         int countValidPasswordSecondPolicy = 0;
-        BufferedReader reader = new BufferedReader(new FileReader("2020/day02/input.txt"));
+        BufferedReader reader = new BufferedReader(new FileReader("2020/day02.txt"));
 
         String line = reader.readLine();
         do {

@@ -11,7 +11,7 @@ public class Day17 {
     public static void main(String[] args) throws IOException {
         System.out.println("\n--- Day 17: Conway Cubes ---");
 
-        BufferedReader reader = new BufferedReader(new FileReader("2020/day17/input.txt"));
+        BufferedReader reader = new BufferedReader(new FileReader("2020/day17.txt"));
         List<String> lines = reader.lines().collect(Collectors.toList());
         reader.close();
 

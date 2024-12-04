@@ -22,7 +22,7 @@ public class Day19 {
     public static void main(String[] args) throws IOException {
         System.out.println("\n--- Day 19: Monster Messages ---");
 
-        BufferedReader reader = new BufferedReader(new FileReader("2020/day19/input.txt"));
+        BufferedReader reader = new BufferedReader(new FileReader("2020/day19.txt"));
         List<String> lines = reader.lines().collect(Collectors.toList());
         reader.close();
 

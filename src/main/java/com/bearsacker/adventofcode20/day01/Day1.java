@@ -38,7 +38,7 @@ public class Day1 {
     }
 
     public static void main(String[] args) throws IOException {
-        List<Integer> numbers = Files.lines(new File("2020/day01/input.txt").toPath()).map(Integer::parseInt).collect(Collectors.toList());
+        List<Integer> numbers = Files.lines(new File("2020/day01.txt").toPath()).map(Integer::parseInt).collect(Collectors.toList());
 
         System.out.println("\n--- Day 1: Report Repair ---");
         System.out.println("Part 1: " + find(2020, numbers, 1));

@@ -12,7 +12,7 @@ public class Day9 {
     public static void main(String[] args) throws IOException {
         System.out.println("\n--- Day 9: Encoding Error ---");
 
-        BufferedReader reader = new BufferedReader(new FileReader("2020/day09/input.txt"));
+        BufferedReader reader = new BufferedReader(new FileReader("2020/day09.txt"));
         List<Long> numbers = reader.lines().map(Long::parseLong).collect(Collectors.toList());
         reader.close();
 

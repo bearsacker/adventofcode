@@ -20,7 +20,7 @@ public class Day3 {
             new Vec2(1, 2));
 
     public static void main(String[] args) throws IOException {
-        BufferedReader reader = new BufferedReader(new FileReader("2020/day03/input.txt"));
+        BufferedReader reader = new BufferedReader(new FileReader("2020/day03.txt"));
         Forest map = new Forest(reader.lines().collect(Collectors.toList()));
         reader.close();
 

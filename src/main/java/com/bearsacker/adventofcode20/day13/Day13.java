@@ -51,7 +51,7 @@ public class Day13 {
     public static void main(String[] args) throws IOException {
         System.out.println("\n--- Day 13: Shuttle Search ---");
 
-        BufferedReader reader = new BufferedReader(new FileReader("2020/day13/input.txt"));
+        BufferedReader reader = new BufferedReader(new FileReader("2020/day13.txt"));
         List<String> lines = reader.lines().collect(Collectors.toList());
         reader.close();
 
