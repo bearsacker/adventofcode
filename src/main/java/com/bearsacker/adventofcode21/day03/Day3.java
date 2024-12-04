@@ -74,7 +74,7 @@ public class Day3 {
     }
 
     public static void main(String[] args) throws IOException {
-        List<String> inputs = Files.lines(new File("2021/day03/input.txt").toPath()).collect(Collectors.toList());
+        List<String> inputs = Files.lines(new File("2021/day03.txt").toPath()).collect(Collectors.toList());
 
         int gammaEpsilon = getGammaEpsilonProduct(inputs, 12);
         int oxygen = getOxygen(inputs, 12);

@@ -31,7 +31,7 @@ public class Day2 {
     }
 
     public static void main(String[] args) throws IOException {
-        List<String> inputs = Files.lines(new File("2021/day02/input.txt").toPath()).collect(Collectors.toList());
+        List<String> inputs = Files.lines(new File("2021/day02.txt").toPath()).collect(Collectors.toList());
 
         System.out.println("\n--- Day 2: Dive! ---");
         Submarine submarine = new Submarine();

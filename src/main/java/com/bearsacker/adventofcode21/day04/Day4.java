@@ -51,7 +51,7 @@ public class Day4 {
 
     public static void main(String[] args) throws IOException {
         LinkedList<String> inputs =
-                new LinkedList<>(Files.lines(new File("2021/day04/input.txt").toPath()).filter(x -> !x.isEmpty()).collect(toList()));
+                new LinkedList<>(Files.lines(new File("2021/day04.txt").toPath()).filter(x -> !x.isEmpty()).collect(toList()));
 
         List<Integer> draws = Arrays.stream(inputs.poll().split(",")).map(Integer::parseInt).collect(toList());
 

@@ -7,7 +7,7 @@ import java.io.IOException;
 public class Day1 {
 
     public static void main(String[] args) throws IOException {
-        BufferedReader reader = new BufferedReader(new FileReader("2015/day01/input.txt"));
+        BufferedReader reader = new BufferedReader(new FileReader("2015/day01.txt"));
         String line = reader.lines().reduce("", (a, b) -> a + b);
         reader.close();
 
