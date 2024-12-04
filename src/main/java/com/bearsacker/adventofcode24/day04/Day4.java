@@ -87,6 +87,46 @@ public class Day4 {
                 .reduce(0L, (a, b) -> a + b);
     }
 
+    public static int countXMAS(char[][] grid) {
+        int count = 0;
+
+        for (int i = 1; i < grid.length - 1; i++) {
+            for (int j = 1; j < grid[0].length - 1; j++) {
+                if (grid[i][j] == 'A' && isXMAS(grid, i, j)) {
+                    count++;
+                }
+            }
+        }
+
+        return count;
+    }
+
+    public static boolean isXMAS(char[][] grid, int i, int j) {
+        char tl = grid[i - 1][j - 1];
+        char tr = grid[i + 1][j - 1];
+        char bl = grid[i - 1][j + 1];
+        char br = grid[i + 1][j + 1];
+
+        if (tl != 'M' && tl != 'S') {
+            return false;
+        }
+        if (tr != 'M' && tr != 'S') {
+            return false;
+        }
+        if (bl != 'M' && bl != 'S') {
+            return false;
+        }
+        if (br != 'M' && br != 'S') {
+            return false;
+        }
+
+        if (tl == br || tr == bl) {
+            return false;
+        }
+
+        return true;
+    }
+
     public static char[][] makeGridFromList(List<String> lines) {
         char[][] grid = new char[lines.get(0).length()][lines.size()];
         for (int i = 0; i < lines.get(0).length(); i++) {
@@ -104,6 +144,7 @@ public class Day4 {
 
         System.out.println("\n--- Day 4: Ceres Search ---");
         System.out.println("Part 1: " + countXMASSAMX(grid));
+        System.out.println("Part 2: " + countXMAS(grid));
     }
 
 }
