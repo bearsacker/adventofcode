@@ -2,6 +2,8 @@ package com.bearsacker.utils;
 
 import static java.lang.Math.sqrt;
 
+import java.util.Objects;
+
 public class Vec2 {
 
     public int x;
@@ -44,5 +46,22 @@ public class Vec2 {
     @Override
     public String toString() {
         return "(" + x + ";" + y + ")";
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(x, y);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Vec2 other = (Vec2) obj;
+        return x == other.x && y == other.y;
     }
 }
